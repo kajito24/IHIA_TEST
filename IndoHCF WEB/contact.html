@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - Indonesia Healthcare Innovation Awards</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <style>
+        /* Specific styles for contact form - can be moved to style.css */
+        .contact-form-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: var(--bg-white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Ensures padding doesn't expand width */
+        }
+
+        .form-group textarea {
+            resize: vertical; /* Allow vertical resizing */
+            min-height: 120px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: var(--bg-white);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="IHIA Logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang IHIA</a></li>
+                    <li><a href="categories.html">Kategori Inovasi</a></li>
+                    <li><a href="registration.html">Daftar Sekarang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    ☰
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Hubungi Kami</h2>
+            <p class="text-center">Kami siap membantu Anda. Silakan hubungi kami melalui formulir di bawah ini atau melalui informasi kontak yang tersedia.</p>
+
+            <div class="contact-form-container">
+                <form id="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nama_lengkap">Nama Lengkap:</label>
+                        <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email_kontak">Email:</label>
+                        <input type="email" id="email_kontak" name="email_kontak" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subjek">Subjek:</label>
+                        <input type="text" id="subjek" name="subjek" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pesan">Pesan Anda:</label>
+                        <textarea id="pesan" name="pesan" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn primary-btn">Kirim Pesan</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Informasi Kontak Langsung</h3>
+                <p>Email: <a href="mailto:info@ihia.org">info@ihia.org</a></p>
+                <p>Telepon: <a href="tel:+6221XXXXXXX">+62 21 XXXX XXXX</a></p>
+                <p>Alamat: [Alamat Kantor IHIA/IndoHCF], Jakarta Pusat, Indonesia</p>
+                <p>Jam Kerja: Senin - Jumat, 09:00 - 17:00 WIB</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Indonesia Healthcare Innovation Awards. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><img src="assets/images/icon-facebook.png" alt="Facebook"></a>
+                <a href="#" aria-label="Instagram"><img src="assets/images/icon-instagram.png" alt="Instagram"></a>
+                <a href="#" aria-label="LinkedIn"><img src="assets/images/icon-linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,422 @@
+:root {
+    --primary-color: #007bff; /* Biru */
+    --secondary-color: #6c757d; /* Abu-abu */
+    --accent-color: #28a745; /* Hijau */
+    --text-color: #0b0923;
+    --bg-light: #f8f9fa;
+    --bg-white: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+/* Header & Nav */
+header {
+    background: linear-gradient(to right, #11357b, #284fec);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('/assets/images/hero_bg.jpg'); /* Ganti dengan gambar Anda */
+    background-size: cover;
+    background-position: left;
+    color: rgb(14, 80, 155);
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+/* --- HERO SECTION TEXT GRADIENT --- */
+#hero h1 {
+    /* Properti gradasi yang sudah ada */
+    background: linear-gradient(-45deg, #0056b3,#0056b3, #afd2ff, #0056b3, #0056b3 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    
+    /* Penyesuaian ukuran dan ketebalan font */
+    font-size: 3.2em; /* Contoh: sedikit lebih besar dari 3em sebelumnya */
+    font-weight: bold; /* Pastikan tetap bold, atau lebih bold jika perlu */
+    margin-bottom: 20px; /* Jaga atau sesuaikan margin */
+}
+
+#hero p {
+    /* Properti gradasi yang sudah ada */
+    background: linear-gradient(to right, #0056b3, #66b2ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Penyesuaian ukuran dan ketebalan font */
+    font-size: 1.3em; /* Contoh: sedikit lebih besar dari 1.2em sebelumnya */
+    font-weight: 600; /* Atau gunakan 'bold', '700', '800' untuk ketebalan */
+    margin-bottom: 30px; /* Jaga atau sesuaikan margin */
+    text-shadow: none; /* Hapus text-shadow lama */
+}
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Sections */
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+#about-ihia, #highlights {
+    background-color: var(--bg-white);
+    text-align: center;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.highlight-item {
+    background-color: var(--bg-light);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.highlight-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer .social-links img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(to right, #0056b3, #66b2ff);
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle button */
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+/* Categories Page Specific Styling */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-item {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.category-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.category-item p {
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #555;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+/* --- HERO SUBPAGE --- */
+.hero-subpage {
+    background-color: var(--primary-color); /* Bisa juga gradasi */
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.hero-subpage h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-subpage p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* --- ABOUT INTRO --- */
+.intro-text {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
+
+/* --- OUR STORY --- */
+.bg-light {
+    background-color: var(--bg-light); /* Digunakan untuk section dengan background abu-abu terang */
+}
+
+.story-layout {
+    display: flex;
+    flex-wrap: wrap; /* Untuk responsivitas */
+    gap: 40px;
+    align-items: center;
+}
+
+.story-content {
+    flex: 1;
+    min-width: 300px; /* Agar tidak terlalu kecil di mobile */
+}
+
+.story-content h3 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.story-video { /* Gunakan nama kelas yang baru jika Anda mengganti dari story-image */
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    position: relative; /* Penting untuk responsivitas video */
+    padding-bottom: 56.25%; /* Rasio aspek 16:9 (tinggi 9 / lebar 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    background-color: #000; /* Background hitam saat video loading */
+    border-radius: 10px; /* Menyesuaikan dengan border-radius gambar sebelumnya */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.story-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Agar video ikut melengkung */
+}
+/* --- VISION & MISSION --- */
+.vm-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column for mobile */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .vm-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    }
+}
+
+.vm-item {
+    background-color: var(--bg-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.vm-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.vm-item ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    text-align: left; /* Align text to left within the box */
+    margin-top: 20px;
+}
+
+.vm-item ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.vm-item ul li:before {
+    content: '✔'; /* Custom checkmark icon */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.icon-circle img {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+    filter: invert(100%); /* Make white if original is dark */
+}
+
+/* General utility */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
